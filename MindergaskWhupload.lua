@@ -7,7 +7,7 @@
 ]]--
 
 ---------------------------------------------------------------------------------------------------------------
-local AUTH_TOKEN = '6BWh8NmAXaPexYsJsPuG'	 -- Fill in here your Mindergas authentication token
+local AUTH_TOKEN = 'YourAPI'	 -- Fill in here your Mindergas authentication token
 ---------------------------------------------------------------------------------------------------------------
 
 return {
