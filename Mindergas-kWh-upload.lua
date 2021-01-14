@@ -43,11 +43,11 @@ return {
 			})
 			
         elseif (item.isHTTPResponse) then
-            local SubSystem   = domoticz.NSS_TELEGRAM
-            local Priority      = domoticz.PRIORITY_NORMAL
-            local Sound         = domoticz.SOUND_DEFAULT
-            local Tittle        = "MinderGas - "
-			local Message       = "Geen idee :" .. item.statusCode
+            	local SubSystem	= domoticz.NSS_TELEGRAM
+            	local Priority	= domoticz.PRIORITY_NORMAL
+            	local Sound	= domoticz.SOUND_DEFAULT
+            	local Tittle	= "MinderGas - "
+		local Message   = "Geen idee :" .. item.statusCode
 			
 			if (item.statusCode == 201) then Message ='WP kWh usage data is sucessfully upoaded.'
 			    elseif (item.statusCode == 401) then Message = 'There was an authorisation problem with the Mindergas.nl database.'
