@@ -1,8 +1,8 @@
 --[[
- Author		: Roblom
- Adjusted       : Vandermark1977
- Description 	: This script collects the kWh-values from Domoticz (for example from the heatpump) and uploads the values to a MinderGas account.
-		  For more information about MinderGas, see the API instructions on their website on https://mindergas.nl/member/api
+ Author			: Roblom
+ Adjusted for kWh	: Vandermark1977
+ Description		: This script collects the kWh-values from Domoticz (for example from the heatpump) and uploads the values to a MinderGas account.
+			  For more information about MinderGas, see the API instructions on their website on https://mindergas.nl/member/api
 ]]--
 
 ---------------------------------------------------------------------------------------------------------------
