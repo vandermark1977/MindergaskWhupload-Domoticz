@@ -14,24 +14,24 @@ return {
 	on = {
 		timer 		= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl
 		httpResponses 	= {'UploadToMindergas'}},
-	 logging =    {
+		logging =    {
 		level = domoticz.LOG_ERROR, -- change to LOG_ERROR when OK - was LOG_DEBUG
-        marker = scriptVar,
-    },
+        	marker = scriptVar,
+    		},
 	execute = function(domoticz, item)
 		
         if item.isTimer then
 		
 			local kWhUsageCounter 	= domoticz.devices(145).WhTotal/1000  -- Change '145'to the Idx of your Usage kWh counter device
-			local TodaysDate 		= tostring(domoticz.time.rawDate)
+			local TodaysDate 	= tostring(domoticz.time.rawDate)
 
 			domoticz.log('WP kWh is ' .. kWhUsageCounter, domoticz.LOG_INFO)
 			domoticz.log('The date is ' .. TodaysDate, domoticz.LOG_INFO )
 		
 			domoticz.openURL({
-				url = 'https://www.mindergas.nl/api/meter_readings',
-				method = 'POST',
-				headers = {
+				url 	= 'https://www.mindergas.nl/api/meter_readings',
+				method	= 'POST',
+				headers	= {
 					['Content-Type']	= 'application/json',
 					['AUTH-TOKEN']		= AUTH_TOKEN
 				},
