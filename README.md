@@ -4,5 +4,5 @@ Domoticz script for daily upload of energy usage to mindergas.nl. Can be used fo
 In your domoticz create a lua script and copy the code. 
 
 You need:
-- the IDX of the heatpump usage counter.
+- IDX of the heatpump/kWh usage counter.
 - Your personal mindergas API
