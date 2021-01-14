@@ -14,9 +14,8 @@ return {
 	on = {
 		timer 		= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl
 		httpResponses 	= {'UploadToMindergas'}},
-	 logging =    
-    {   
-        level = domoticz.LOG_ERROR, -- change to LOG_ERROR when OK - was LOG_DEBUG
+	 logging =    {
+		level = domoticz.LOG_ERROR, -- change to LOG_ERROR when OK - was LOG_DEBUG
         marker = scriptVar,
     },
 	execute = function(domoticz, item)
