@@ -1,5 +1,4 @@
 --[[
- /home/pi/domoticz/scripts/dzVents/scripts/upload_gas_usage_to_minderGas.lua
  Author		: Roblom
  Adjusted       : Vandermark
  Description 	: This script collects the kWh-values from Domoticz (for example from the heatpump) and uploads the values to a MinderGas account.
@@ -13,7 +12,7 @@ local AUTH_TOKEN = 'YourMindergasAPI'	 -- Fill in here your Mindergas authentica
 return {
 	active = true,
 	on = {
-		timer 			= {'at 0:12'},       --Time to upload kWh counter value to mindergas.nl
+		timer 			= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl
 		--timer 			= {'every minute'},
 		httpResponses 	= {'UploadToMindergas'}},
 	 logging =    
@@ -25,14 +24,14 @@ return {
 		
         if item.isTimer then
 		
-			local kWhUsageCounter 	= domoticz.devices(145).WhTotal/1000  -- Idx of the Usage kWh counter device
+			local kWhUsageCounter 	= domoticz.devices(145).WhTotal/1000  -- Change '145'to the Idx of your Usage kWh counter device
 			local TodaysDate 		= tostring(domoticz.time.rawDate)
 
 			domoticz.log('WP kWh is ' .. kWhUsageCounter, domoticz.LOG_INFO)
 			domoticz.log('The date is ' .. TodaysDate, domoticz.LOG_INFO )
 		
 			domoticz.openURL({
-				url = 'https://www.mindergas.nl/api/meter_readings',        -- New URL of mindegas.nl
+				url = 'https://www.mindergas.nl/api/meter_readings',
 				method = 'POST',
 				headers = {
 					['Content-Type']	= 'application/json',
