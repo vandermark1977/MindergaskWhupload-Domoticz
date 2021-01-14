@@ -1,9 +1,9 @@
 --[[
  /home/pi/domoticz/scripts/dzVents/scripts/upload_gas_usage_to_minderGas.lua
- Author 		: Roblom
+ Author		: Roblom
  Adjusted       : Vandermark
  Description 	: This script collects the kWh-values from Domoticz (for example from the heatpump) and uploads the values to a MinderGas account.
-			      For more information about MinderGas, see the API instructions on their website on https://mindergas.nl/member/api
+		  For more information about MinderGas, see the API instructions on their website on https://mindergas.nl/member/api
 ]]--
 
 ---------------------------------------------------------------------------------------------------------------
