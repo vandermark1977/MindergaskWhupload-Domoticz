@@ -12,8 +12,7 @@ local AUTH_TOKEN = 'YourMindergasAPI'	 -- Fill in here your Mindergas authentica
 return {
 	active = true,
 	on = {
-		timer 			= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl
-		--timer 			= {'every minute'},
+		timer 		= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl
 		httpResponses 	= {'UploadToMindergas'}},
 	 logging =    
     {   
