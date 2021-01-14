@@ -37,8 +37,8 @@ return {
 				},
 				callback = 'UploadToMindergas',
 				postData = {
-					['date']			= TodaysDate,
-					['reading']			= kWhUsageCounter
+					['date']		= TodaysDate,
+					['reading']		= kWhUsageCounter
 				},
 			})
 			
