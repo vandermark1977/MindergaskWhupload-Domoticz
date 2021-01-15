@@ -12,7 +12,8 @@ local AUTH_TOKEN = 'YourMindergasAPI'	 -- Fill in here your Mindergas authentica
 return {
 	active = true,
 	on = {
-		timer		= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl
+		timer		= {'at 0:12'},       --Time for daily upload kWh counter value to mindergas.nl. Change to random time to prevent server overload
+
 		httpResponses	= {'UploadToMindergas'}},
 		logging 	=    {
 				level	= domoticz.LOG_ERROR, -- change to LOG_ERROR when OK - was LOG_DEBUG
